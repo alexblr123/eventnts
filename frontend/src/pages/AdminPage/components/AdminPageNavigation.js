@@ -43,9 +43,7 @@ function AdminPageNavigation({
           handleRowAdd={handleRowAdd}
         />
       </TabPanel>
-      <TabPanel>
-        <ImagesContainer />
-      </TabPanel>
+      <TabPanel></TabPanel>
     </>
   );
 }
