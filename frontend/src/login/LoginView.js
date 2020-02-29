@@ -2,9 +2,21 @@ import React from "react";
 import "./css.css";
 
 const LoginView = props => {
-  const { handlePasswordChange, handleUsernameChange, handleSubmit } = props;
+  const {
+    isAuth,
+    handlePasswordChange,
+    handleUsernameChange,
+    handleSubmit
+  } = props;
   return (
     <form className="form" onSubmit={event => handleSubmit(event)}>
+      <div
+        className="check"
+        style={
+          isAuth ? { backgroundColor: "blue" } : { backgroundColor: "red" }
+        }
+      ></div>
+
       <fieldset>
         <legend> lol</legend>
         <input
@@ -22,7 +34,7 @@ const LoginView = props => {
           onChange={event => handlePasswordChange(event.target.value)}
         />
         <button type="submit" name="submitButton" value="Enter">
-          asdfasd
+          Submit
         </button>
       </fieldset>
     </form>
