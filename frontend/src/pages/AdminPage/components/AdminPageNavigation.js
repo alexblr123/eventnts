@@ -6,8 +6,6 @@ import TabPanel from "./TabPanel";
 import AdminPageClientListContainerSecond from "../containers/AdminPageClientListContainerSecond";
 import AdminPageClientListContainer from "../containers/AdminPageClientListContainer";
 import ImagesContainer from "../containers/ImagesContainer";
-import LoginContainer from "../../../login/LoginContainer";
-import ExampleContainer from "../containers/ExampleContainer";
 
 function AdminPageNavigation({
   value,
@@ -45,10 +43,7 @@ function AdminPageNavigation({
           handleRowAdd={handleRowAdd}
         />
       </TabPanel>
-      <TabPanel value={value} index={2}>
-        <LoginContainer />
-        <ExampleContainer />
-      </TabPanel>
+      <TabPanel value={value} index={2}></TabPanel>
     </>
   );
 }

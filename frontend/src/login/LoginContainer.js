@@ -1,5 +1,6 @@
 import React from "react";
 import LoginView from "./LoginView";
+import { withRouter } from "react-router-dom";
 
 class LoginContainer extends React.Component {
   state = {
@@ -8,7 +9,9 @@ class LoginContainer extends React.Component {
     password: ""
   };
   componentDidUpdate = () => {
-    console.log(this.state.password);
+    if (this.state.isAuth) {
+      this.props.history.push("/admin");
+    }
   };
   handleUsernameChange = value => {
     this.setState({ username: value });
@@ -52,4 +55,4 @@ class LoginContainer extends React.Component {
   }
 }
 
-export default LoginContainer;
+export default withRouter(LoginContainer);
