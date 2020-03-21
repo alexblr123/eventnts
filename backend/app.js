@@ -9,20 +9,8 @@ const app = express();
 const port = 3001;
 const loginRoutes = require("./modules/login/routes");
 
-const userSchema = new mongoose.Schema({
-  username: String,
-  password: String
-});
-
-const User = mongoose.model("Users", userSchema);
-
-User.find((err, users) => {
-  if (err) return console.error(err);
-  console.log(users);
-});
-
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.use("/login", loginRoutes);
 
