@@ -1,0 +1,75 @@
+.checks {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+#check + label::before {
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  content: "";
+  margin-right: 0.5em;
+  margin-top: 0.2em;
+}
+.checks + label:hover {
+  color: blue;
+}
+
+#check:checked + label {
+  color: red;
+}
+#check:checked + label::before {
+  background-color: green;
+}
+
+#check1 + label::before {
+  border: 2px solid black;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  content: "";
+  margin-right: 0.5em;
+  margin-top: 0.2em;
+}
+#check1:checked + label::before {
+  background-image: url("https://img1.picmix.com/output/stamp/thumb/9/8/0/8/788089_0dcec.gif");
+}
+#check2 + label::before {
+  border: 2px solid black;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  content: "";
+  margin-right: 0.5em;
+  margin-top: 0.2em;
+}
+#check2:checked + label::before {
+  background-image: url("https://i.gifer.com/origin/4f/4fe01b4b131f54ae9d8674f95b24169a_w200.gif");
+}
+#check3 + label::before {
+  border: 2px solid black;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  content: "";
+  margin-right: 0.5em;
+  margin-top: 0.2em;
+}
+#check3:checked + label::before {
+  background-image: url("https://i.gifer.com/origin/6f/6f20a1ae0ce9d2d348e11955db7a91ea_w200.gif");
+}
+#check4 + label::before {
+  border: 2px solid black;
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  content: "";
+  margin-right: 0.5em;
+  margin-top: 0.2em;
+}
+#check4:checked + label::before {
+  background-image: url("https://i.gifer.com/origin/fa/fa9e27a7534060df383ab54354fcead3_w200.gif");
+}
